@@ -8,137 +8,144 @@
 </head>
 <body>
 
-
-
-<!-- Preloading bg images for slider 
-<div id="preloaded-images">
-   <img src="https://perishablepress.com/image-01.png" width="1" height="1" alt="Image 01" />
-   <img src="https://perishablepress.com/image-02.png" width="1" height="1" alt="Image 02" />
-   <img src="https://perishablepress.com/image-03.png" width="1" height="1" alt="Image 03" />
-</div>
-<!-- Preloading bg images for slider -->
-
-
-
 <div id="art">
     <span style="font-weight:400; color:#999; font-size:15px;">ARTWORK BY</span>
     <h3 id="artistname"><a href="http://www.loganmclain.com" target="_blank">Logan McLain</a></h3>
     <a href="https://instagram.com/sloggiebear" target="_blank">Follow on Instagram <img src="http://loganmclain.com/wp-content/uploads/insta.png" style="width:20px;height:20px;vertical-align: middle;"/></a>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Gradey -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-1398391812567726"
-         data-ad-slot="9307677494"
-         data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
 <div id="container">
 
-<!-- Header with logo and menu -->
-<div id="header">
-<img src="images/logo.png" />
-<div id="info" class="icon" onClick="classToggle()"><img id="icon" src="images/info-off.png" /></div>
-</div>
+  <!-- Header with logo and menu -->
+  <div id="header">
+  <img src="images/logo.png" />
+  <div id="info" class="icon" onClick="classToggle()"><img id="icon" src="images/info-off.png" /></div>
+  </div>
 
 
-<div id="intro" class="hidden">
-<h3>About Gradey</h3>
-<p>Gradey is based on alpha grade calculation points used by UCD and NCAD. It can be used to get the total average grade based on two, three or four assessment criteria.</p>
+  <div id="intro" class="hidden">
+  <h3>About Gradey</h3>
+  <p>Gradey is based on alpha grade calculation points used by UCD and NCAD. It can be used to get the total average grade based on two, three or four assessment criteria.</p>
 
-<h3>Disclaimer</h3>
-<p>While every effort has been made to ensure the reliabilty of Gradey there is no guarantee the information presented on this website is accurate or up to date. By using this website you accept that you do so at your own risk.  No liability is accepted by the creator of this site for any errors, inaccuaracies or mistakes arising through its use. The code is open source and can be viewed on Github. Feel free to suggest edits to improve it.</p>
-</div>
-
-
-<!-- Select the number of grades to average -->
-<div id="numgrades">
-<form id="setnumgrades" onchange="getNumGrades()">
-Number of grades to average: 
-  <input type="radio" name="numgrade" value="1"> 1 
-  <input type="radio" name="numgrade" value="2"> 2 
-  <input type="radio" name="numgrade" value="3"> 3 
-  <input type="radio" name="numgrade" value="4" id="default" checked> 4
-</form>
-</div>
-
-<!-- Main content (Grades container and results container with display css setting switched by javascript) -->
-<div id ="maincontent">
-    
-    <!-- Grades to be calculated -->
-    <div id="calc">
-    	<div id="insult"></div>
-    	<button id="dothething" class="button" type="button" onclick="sumGrades()">Calculate!</button>
-        <div id="grades">
-            <form id="setgrades"></form>
-        <div class="clearfix"></div>
-        </div>
-    </div><!-- end of "clac" -->
+  <h3>Disclaimer</h3>
+  <p>While every effort has been made to ensure the reliabilty of Gradey there is no guarantee the information presented on this website is accurate or up to date. By using this website you accept that you do so at your own risk.  No liability is accepted by the creator of this site for any errors, inaccuaracies or mistakes arising through its use. The code is open source and can be viewed on Github. Feel free to suggest edits to improve it.</p>
+  </div>
 
 
-	<!-- Outputted results -->
-    <div id="themath">
-        <button id="reset" class="button" type="button" onclick="resetForm()">Reset</button>
-        <h3>RESULT:</h3>
-        <p id="result"></p>
-        
-        <h3>YOU SELECTED:</h3>
-        <ul id="youselected">
-        </ul>
-        
-        <h3>THE MATH:</h3>
-        <table >
-            <tbody id="enteredgrades">
-            </tbody>
-            </table>
-            
-            <table>
-              <tr>
-                <td>SUM</td>
-                <td><span id="total"></span></td>
-              </tr>
-              <tr>
-                <td>DIVIDED BY</td>
-                <td><span id="num_grades"></span></td>
-              </tr>
-              <tr>
-                <td>AVERAGE</td>
-                <td><span id="average"></span></td>
-              </tr>
-              <tr>
-                <td>ROUNDED</td>
-                <td><span id="rounded"></span></td>
-              </tr>
-              <tr>
-                <td>AS ALPHA</td>
-                <td><span id="output"></span></td>
-              </tr>
-      	</table>
-    </div>
-    <!-- end of "themath" -->
-</div>
+  <!-- Select the number of grades to average -->
+  <div id="numgrades">
+  <form id="setnumgrades" onchange="getNumGrades()">
+  Number of grades to average: 
+    <input type="radio" name="numgrade" value="1"> 1 
+    <input type="radio" name="numgrade" value="2"> 2 
+    <input type="radio" name="numgrade" value="3"> 3 
+    <input type="radio" name="numgrade" value="4" id="default" checked> 4
+  </form>
+  </div>
+
+  <!-- Main content (Grades container and results container with display css setting switched by javascript) -->
+  <div id ="maincontent">
+      
+      <!-- Grades to be calculated -->
+      <div id="calc">
+      	<div id="insult"></div>
+      	<button id="dothething" class="button" type="button" onclick="sumGrades()">Calculate!</button>
+          <div id="grades">
+              <form id="setgrades"></form>
+          <div class="clearfix"></div>
+          </div>
+      </div><!-- end of "clac" -->
 
 
+  	<!-- Outputted results -->
+      <div id="themath">
+          <button id="reset" class="button" type="button" onclick="resetForm()">Reset</button>
+          <h3>RESULT:</h3>
+          <p id="result"></p>
+          
+          <h3>YOU SELECTED:</h3>
+          <ul id="youselected">
+          </ul>
+          
+          <h3>THE MATH:</h3>
+          <table >
+              <tbody id="enteredgrades">
+              </tbody>
+              </table>
+              
+              <table>
+                <tr>
+                  <td>SUM</td>
+                  <td><span id="total"></span></td>
+                </tr>
+                <tr>
+                  <td>DIVIDED BY</td>
+                  <td><span id="num_grades"></span></td>
+                </tr>
+                <tr>
+                  <td>AVERAGE</td>
+                  <td><span id="average"></span></td>
+                </tr>
+                <tr>
+                  <td>ROUNDED</td>
+                  <td><span id="rounded"></span></td>
+                </tr>
+                <tr>
+                  <td>AS ALPHA</td>
+                  <td><span id="output"></span></td>
+                </tr>
+        	</table>
+      </div>
+      <!-- end of "themath" -->
+  </div>
 
 
 
-<div id="minifooter">© LOGAN MC LAIN | <a href="http://www.loganmclain.com" target="_blank">Site design by Slogan</a></div>
-</div>
+
+
+  <div id="minifooter">© LOGAN MC LAIN | <a href="http://www.loganmclain.com" target="_blank">Site design by Slogan</a></div>
+  </div>
 </div>
 
 <script type="text/javascript">getNumGrades();</script>
 
-<div id="bgslider"></div>
-
-
-<script type="text/javascript">
-var rndimg = "images/logan_mclain_" + Math.floor(Math.random() * 7) + ".jpg"
-document.getElementById("bgslider").innerHTML = "<img id=\"bgimg\" src=\"" + rndimg + "\" >";
-</script>
+<div class="bgslider">
+  <img class="bgslider-img fade" src="images/logan_mclain_0.jpg">
+  <img class="bgslider-img fade" src="images/logan_mclain_1.jpg">
+  <img class="bgslider-img fade" src="images/logan_mclain_2.jpg">
+  <img class="bgslider-img fade" src="images/logan_mclain_3.jpg">
+  <img class="bgslider-img fade" src="images/logan_mclain_4.jpg">
+  <img class="bgslider-img fade" src="images/logan_mclain_5.jpg">
+  <img class="bgslider-img fade" src="images/logan_mclain_6.jpg">
+</div>
 
 </body>
+
+<script type="text/javascript">
+
+var slideIndex = 0;
+slideChange()
+
+function slideChange() {
+    var i;
+    var slides = document.getElementsByClassName("bgslider-img");
+
+    console.log(slides);
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+      slideIndex = 1
+    } 
+
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(slideChange, 30000);
+}
+
+</script>
 </html>

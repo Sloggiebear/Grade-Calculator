@@ -74,8 +74,17 @@ a {
 }
 
 .gradelist option {
-	background-color: #EBEBEB; !important /* for IE */
-	background: linear-gradient(#EBEBEB,#EBEBEB); 
+	background-color: #EBEBEB!important; /* for IE */
+	text-align: center;
+	padding: 3px;
+	margin: 5px;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+.gradelist option:checked {
+	background-color: #303030!important; /* for IE */
+	color: #ffffff;
 	text-align: center;
 	padding: 3px;
 	margin: 5px;
@@ -123,7 +132,7 @@ a {
     display: inline;
     width: 16px;
     height: 16px;
-    background-color: #CCC;
+    background-color: rgb(238, 46, 222);
     text-align: center;
     padding: 8px;
     margin-right: 5px;

@@ -97,7 +97,7 @@ function totalGrades(resultsArray) {
 		total = total + resultsArray[step];
 	}
 	var averageResult = parseFloat(total)/numGrades;
-	roundedResult = averageResult.toFixed(2);
+	roundedResult = Math.round(averageResult.toFixed(2));
 	var output = convertGrade(roundedResult);
 
 	
